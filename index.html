@@ -7,10 +7,48 @@
     <title>TBC x USAID</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/icon.png" />
     <link rel="stylesheet" href="./CSS/reset.css" />
-
+    <link rel="stylesheet" href="./CSS/style.css" />
 </head>
 
 <body>
+    <!-- header -->
+    <header class="flex">
+        <div class="header-layout flex">
+            <div>
+                <img src="./assets/images/header-logo.svg" alt="header logo" />
+            </div>
+            <div class="hamburger-menu flex" onclick="toggleMenu()">
+                <div class="burger-menu flex">
+                    <div class="burger-menu_one"></div>
+                    <div class="burger-menu_two"></div>
+                    <div class="burger-menu_three"></div>
+                </div>
+            </div>
+            <div class="mobile-navigation" id="mobileNavigation">
+                <nav>
+                    <ul class="nav-on-all">
+                        <li><a href="https://www.tbcacademy.ge/">მთავარი</a></li>
+                        <li><a href="https://www.tbcacademy.ge/it-academy">TBC IT</a></li>
+                        <li><a href="./index.html" class="active-nav-page">TBC x USAID</a></li>
+                        <li><a href="https://www.tbcacademy.ge/risks-academy">რისკები</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="desktop-navigation">
+                <nav>
+                    <ul class="flex nav-on-all">
+                        <li><a href="https://www.tbcacademy.ge/">მთავარი</a></li>
+                        <li><a href="https://www.tbcacademy.ge/it-academy">TBC IT</a></li>
+                        <li><a href="./index.html" class="active-nav-page">TBC x USAID</a></li>
+                        <li><a href="https://www.tbcacademy.ge/risks-academy">რისკები</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="menu-opened-overlay" onclick="toggleMenu()"></div>
+        </div>
+    </header>
+
+    <script src="./JS/functions.js"></script>
 
 </body>
 
