@@ -4,6 +4,7 @@
 @import "./components/cover-image.css";
 @import "./components/about.css";
 @import "./components/courses-grid.css";
+@import "./components/footer.css";
 
 /* shared classes */
 .flex {
