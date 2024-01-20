@@ -1,0 +1,80 @@
+@import '../stored/variables.css';
+
+.cover-section {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-text {
+    color: var(--text-main);
+    font-family: var(--font-119);
+    font-weight: bold;
+    top: 27%;
+    line-height: 1.6;
+    position: absolute;
+    padding: 0 20px;
+}
+
+.cover-text p:first-child {
+    font-size: var(--text-xxl);
+    margin-bottom: 8px;
+}
+
+.cover-text p:last-child {
+    font-size: 22px;
+}
+
+.text-container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.cover-mobile {
+    width: 320px;
+    height: 217px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.cover-desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 480px) {
+    .cover-mobile {
+        display: none;
+    }
+
+    .cover-desktop {
+        display: block;
+        width: 100%;
+        min-height: 352px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .cover-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cover-text p:first-child {
+        font-size: 42px;
+    }
+
+    .cover-text p:last-child {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .cover-text {
+        width: 980px;
+        padding: 0;
+    }
+
+}

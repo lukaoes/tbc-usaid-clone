@@ -1,0 +1,9 @@
+@import "../CSS/stored/fonts.css";
+
+@import "./components/header.css";
+@import "./components/cover-image.css";
+
+/* shared classes */
+.flex {
+    display: flex;
+}
