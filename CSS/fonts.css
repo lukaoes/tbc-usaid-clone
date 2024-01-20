@@ -1,0 +1,31 @@
+@font-face {
+    font-display: block;
+    font-family: wf_f52303b2efea42e1b4aeed119;
+    src: url("../assets/fonts/wf_f52303b2efea42e1b4aeed119/file.woff2") format("woff2"),
+        url("../assets/fonts/wf_f52303b2efea42e1b4aeed119/file.woff") format("woff"),
+        url("../assets/fonts/wf_f52303b2efea42e1b4aeed119/file.ttf") format("ttf");
+}
+
+@font-face {
+    font-display: block;
+    font-family: wf_dd28b3957391427eb54de1c9e;
+    src: url("../assets/fonts/wf_dd28b3957391427eb54de1c9e/file.woff2") format("woff2"),
+        url("../assets/fonts/wf_dd28b3957391427eb54de1c9e/file.woff") format("woff"),
+        url("../assets/fonts/wf_dd28b3957391427eb54de1c9e/file.ttf") format("ttf");
+}
+
+@font-face {
+    font-display: block;
+    font-family: wf_7737b5e7be24426aa35c9f431;
+    src: url("../assets/fonts/wf_7737b5e7be24426aa35c9f431/file.woff2") format("woff2"),
+        url("../assets/fonts/wf_7737b5e7be24426aa35c9f431/file.woff") format("woff"),
+        url("../assets/fonts/wf_7737b5e7be24426aa35c9f431/file.ttf") format("ttf");
+}
+
+@font-face {
+    font-display: block;
+    font-family: wf_93c16d86ec9d47d0a2a36894f;
+    src: url("../assets/fonts/wf_93c16d86ec9d47d0a2a36894f/file.woff2") format("woff2"),
+        url("../assets/fonts/wf_93c16d86ec9d47d0a2a36894f/file.woff") format("woff"),
+        url("../assets/fonts/wf_93c16d86ec9d47d0a2a36894f/file.ttf") format("ttf");
+}
