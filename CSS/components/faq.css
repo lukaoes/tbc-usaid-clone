@@ -102,26 +102,29 @@
 
 @media only screen and (min-width: 768px) {
     .faq h1 {
+        padding: 105px 0 20px 0;
         max-width: 963px;
         font-size: var(--text-xxl);
     }
 
     .question h3 {
+        padding: 17px 0;
         font-size: var(--text-l);
     }
 
     .faq a {
         position: absolute;
-        top: 0;
+        top: 109px;
         right: 0;
         font-size: var(--text-xl);
         width: 180px;
         text-align: right;
-        padding-right: 20px;
+        padding: 0 31px 0 0;
+
     }
 
     .faq-layout {
-        padding-bottom: 72px;
+        padding-bottom: 80px;
     }
 }
 
