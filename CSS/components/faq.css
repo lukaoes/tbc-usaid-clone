@@ -53,8 +53,6 @@
 }
 
 .question-container p {
-    font-size: var(--text-xs);
-    line-height: 2;
     padding-bottom: 30px;
 }
 
@@ -70,16 +68,30 @@
 }
 
 .answer {
+    font-size: var(--text-xs);
+    line-height: 2;
+    cursor: auto;
     max-height: 0;
     overflow: hidden;
-    padding-bottom: 0 !important;
-    transition: max-height 0.3s ease, padding 0.2s ease;
+    transition: max-height 0.5s ease;
+}
+
+.answer ul {
+    margin-bottom: 30px;
+}
+
+.answer li {
+    margin-left: 24px;
+    padding: 4px 0;
+}
+
+.answer span {
+    font-weight: bold;
 }
 
 .answer-open {
-    max-height: 500px;
-    padding-bottom: 30px !important;
-    transition: max-height 0.3s ease, padding 0.2s ease;
+    max-height: 1550px;
+    transition: max-height 0.5s ease;
 }
 
 @media screen and (min-width: 480px) {
