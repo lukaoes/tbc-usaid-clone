@@ -18,7 +18,7 @@ footer {
 
 footer button {
     background-color: var(--brand-color);
-    color: var(--text-main);
+    color: var(--white);
     font-family: var(--font-c9e);
     width: 109px;
     height: 35px;
@@ -40,7 +40,7 @@ footer button:hover {
 
 .socials {
     justify-content: space-between;
-    width: 85px;
+    width: 88px;
     height: 35px;
     margin: 0px 0px 35px 0;
 }
@@ -102,7 +102,7 @@ footer button:hover {
 
     .footer-text p {
         padding: 0;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .footer-text a {
@@ -112,8 +112,12 @@ footer button:hover {
 
 @media only screen and (min-width: 980px) {
     .footer-container {
-        width: 963px;
+        width: 980px;
         margin: 0 auto;
+    }
+
+    .footer-logo {
+        margin: 60px 0px 25px 0;
     }
 
     .socials img {
@@ -122,6 +126,7 @@ footer button:hover {
     }
 
     .contact-container {
+        top: 62px;
         right: 0;
     }
 
