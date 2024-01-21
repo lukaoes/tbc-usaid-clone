@@ -16,6 +16,7 @@
 }
 
 .slides {
+    width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -98,8 +99,8 @@
     }
 
     .slides {
+        /* overflow: hidden; */
         width: 980px;
-        overflow: hidden;
         margin: 0 auto;
         height: 224px;
     }
