@@ -49,6 +49,12 @@ const watchSizeChange = () => {
     }
 };
 
+watchSizeChange();
+
+window.onresize = () => {
+    watchSizeChange();
+};
+
 
 
 // FAQ questions accordion 
