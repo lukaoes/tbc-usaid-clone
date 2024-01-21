@@ -14,7 +14,7 @@ const toggleMenu = () => {
 };
 
 // header on scroll
-const updateHeaderOnScroll = () => {
+const headerChange = () => {
     let lastScroll = window.pageYOffset;
     let header = document.getElementById("main-header");
 
@@ -36,6 +36,17 @@ const updateHeaderOnScroll = () => {
 
         lastScroll = scrollNow;
     };
+};
+
+const watchSizeChange = () => {
+    if (window.innerWidth < 768) {
+        headerChange();
+    } else {
+        let header = document.getElementById("main-header");
+        header.style.top = "0";
+        header.style.opacity = "1";
+        window.onscroll = null;
+    }
 };
 
 
