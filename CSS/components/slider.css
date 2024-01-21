@@ -1,0 +1,115 @@
+@import '../stored/variables.css';
+
+.slider {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider h1 {
+    font-family: var(--font-c9e);
+    font-size: var(--text-l);
+    color: var(--text-main);
+    width: 280px;
+    padding: 20px 20px 11px 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    margin: 40px 0 20px 0;
+    min-width: 100%;
+    height: 285px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.slide img {
+    display: inline-block;
+    max-height: 66px;
+}
+
+
+.slider-dots {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 7.5px;
+    background-color: #e8e6e6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--brand-color);
+}
+
+.slider-arrows {
+    display: none;
+}
+
+@media only screen and (min-width: 980px) {
+    .slider-arrows {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .slider-arrows svg {
+        fill: #e1dfdf;
+        cursor: pointer;
+        width: 18px;
+        display: inline-block;
+        stroke: #e1dfdf;
+        stroke-width: 2px;
+        margin: 0px 100px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .slider-arrows svg:hover {
+        opacity: 0.4;
+    }
+
+    .slider-arrows svg:last-child {
+        transform: rotateY(180deg);
+    }
+
+    .slider h1 {
+        width: 963px;
+        font-size: var(--text-xxl);
+        margin: 34px auto 31px auto;
+        padding: 0;
+    }
+
+    .slides {
+        width: 980px;
+        overflow: hidden;
+        margin: 0 auto;
+        height: 224px;
+    }
+
+    .slide {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        margin: 0;
+    }
+
+}
