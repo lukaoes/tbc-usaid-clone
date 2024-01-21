@@ -12,15 +12,14 @@
     color: var(--text-main);
     font-family: var(--font-119);
     font-weight: bold;
-    top: 27%;
-    line-height: 1.6;
+    top: 23%;
+    line-height: 1.8;
     position: absolute;
     padding: 0 20px;
 }
 
 .cover-text p:first-child {
     font-size: var(--text-xxl);
-    margin-bottom: 8px;
 }
 
 .cover-text p:last-child {
@@ -73,6 +72,7 @@
 
 @media only screen and (min-width: 980px) {
     .cover-text {
+        top: 27%;
         width: 980px;
         padding: 0;
     }
