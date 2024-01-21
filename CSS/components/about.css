@@ -18,7 +18,7 @@
 .about .learn-more {
     width: 280px;
     margin: 0 20px;
-    padding: 0 0 32px 0;
+    padding: 10px 0 42px 0;
 }
 
 .about .learn-more a {
@@ -45,6 +45,6 @@
         font-size: var(--text-xl);
         width: 963px;
         margin: 0 auto;
-        padding: 0 0 57px 0;
+        padding: 0 0 65px 0;
     }
 }
