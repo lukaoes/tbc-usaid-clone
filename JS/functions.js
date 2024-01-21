@@ -13,6 +13,33 @@ const toggleMenu = () => {
     menuOpenedOverlay.style.display = mobileNavigation.style.right === '0px' ? 'block' : 'none';
 };
 
+// header on scroll
+const updateHeaderOnScroll = () => {
+    let lastScroll = window.pageYOffset;
+    let header = document.getElementById("main-header");
+
+    window.onscroll = () => {
+        let scrollNow = window.pageYOffset;
+
+        if (scrollNow === 0) {
+            header.style.backgroundColor = "#1A1E1F";
+            header.style.opacity = "1";
+            header.style.top = "0";
+        } else if (lastScroll > scrollNow) {
+            header.style.top = "0";
+            header.style.backgroundColor = "#222222F2";
+            header.style.opacity = "0.99";
+        } else {
+            header.style.top = "-69px";
+            header.style.opacity = "0.99";
+        }
+
+        lastScroll = scrollNow;
+    };
+};
+
+
+
 // FAQ questions accordion 
 const toggleAnswer = (qnum) => {
     const answer = document.querySelector(`.answer-${qnum}`);
