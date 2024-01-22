@@ -181,3 +181,36 @@ const updateDots = () => {
     dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
 };
 
+const goToSlide = (index) => {
+    currentIndex = index;
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth > 979) {
+        const allSlides = document.querySelectorAll('.slide');
+        allSlides.forEach((slide, i) => {
+            const opacityValue = i === index ? 1 : 0;
+            slide.style.transition = 'opacity 1s ease-in-out';
+            slide.style.opacity = opacityValue;
+        });
+
+        setTimeout(() => {
+            allSlides.forEach((slide) => {
+                slide.style.transition = 'none';
+            });
+            updateDots();
+        }, 1000);
+    } else {
+        const translateValue = -index * 100 + '%';
+        slides.style.transition = 'all 1s ease-in-out';
+        slides.style.transform = 'translateX(' + translateValue + ')';
+        updateDots();
+    }
+
+    clearTimeout(autoSlideTimeout);
+
+    clearTimeout(delayTimeout);
+    delayTimeout = setTimeout(() => {
+        slides.style.transition = 'transform 0.5s ease-in-out';
+        automaticSlideChange();
+    }, 1000);
+};
