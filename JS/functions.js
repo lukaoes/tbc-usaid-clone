@@ -239,3 +239,23 @@ const handleResize = () => {
 
     updateDots();
 };
+
+const allSlides = document.querySelectorAll('.slide');
+if (window.innerWidth > 979) {
+    allSlides.forEach((slide, i) => {
+        const opacityValue = i === 0 ? 1 : 0;
+        slide.style.transition = 'opacity 1.3s ease-in-out';
+        slide.style.opacity = opacityValue;
+    });
+} else {
+    const translateValue = -currentIndex * 100 + '%';
+    slides.style.transition = 'none';
+    slides.style.transform = 'translateX(' + translateValue + ')';
+}
+
+window.addEventListener('resize', handleResize);
+
+handleResize();
+
+updateDots();
+automaticSlideChange();
