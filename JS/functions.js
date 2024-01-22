@@ -164,3 +164,20 @@ slides.addEventListener('touchmove', (event) => {
     x1 = null;
 });
 
+const automaticSlideChange = () => {
+    autoSlideTimeout = setTimeout(() => {
+        goToSlide(currentIndex < totalSlides - 1 ? currentIndex + 1 : 0);
+        automaticSlideChange();
+    }, 3000);
+};
+
+slides.addEventListener('touchend', () => {
+    clearTimeout(autoSlideTimeout);
+    clearTimeout(delayTimeout);
+    delayTimeout = setTimeout(automaticSlideChange, 3000);
+});
+
+const updateDots = () => {
+    dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+};
+
