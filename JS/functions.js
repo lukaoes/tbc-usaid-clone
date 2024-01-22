@@ -96,3 +96,48 @@ const dots = Array.from({ length: totalSlides }, (_, i) => {
     return dot;
 });
 
+const arrowsContainer = document.querySelector('.slider-arrows');
+const arrowLeft = document.querySelector('.slider-arrows .arrow-left');
+const arrowRight = document.querySelector('.slider-arrows .arrow-right');
+
+arrowLeft.addEventListener('click', () => {
+    if (currentIndex === 0) {
+        const allSlides = document.querySelectorAll('.slide');
+        const lastIndex = totalSlides - 1;
+
+        allSlides.forEach((slide, i) => {
+            const opacityValue = i === lastIndex ? 1 : 0;
+            slide.style.transition = 'opacity 1s ease-in-out';
+            slide.style.opacity = opacityValue;
+        });
+
+        currentIndex = lastIndex;
+        updateDots();
+
+        clearTimeout(autoSlideTimeout);
+        clearTimeout(delayTimeout);
+        delayTimeout = setTimeout(() => {
+            automaticSlideChange();
+        }, 1000);
+    } else {
+        goToSlide(currentIndex - 1);
+    }
+});
+arrowRight.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+
+    const allSlides = document.querySelectorAll('.slide');
+    allSlides.forEach((slide, i) => {
+        const opacityValue = i === currentIndex ? 1 : 0;
+        slide.style.transition = 'opacity 1s ease-in-out';
+        slide.style.opacity = opacityValue;
+    });
+
+    updateDots();
+
+    clearTimeout(autoSlideTimeout);
+    clearTimeout(delayTimeout);
+    delayTimeout = setTimeout(() => {
+        automaticSlideChange();
+    }, 1000);
+});
