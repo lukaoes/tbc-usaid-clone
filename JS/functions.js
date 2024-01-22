@@ -141,3 +141,26 @@ arrowRight.addEventListener('click', () => {
         automaticSlideChange();
     }, 1000);
 });
+
+slides.addEventListener('touchstart', (event) => {
+    x1 = event.touches[0].clientX;
+});
+
+slides.addEventListener('touchmove', (event) => {
+    if (!x1) return;
+    const x2 = event.touches[0].clientX;
+    const dx = x1 - x2;
+
+    if (dx > 0 && currentIndex < totalSlides - 1) {
+        goToSlide(currentIndex + 1);
+    } else if (dx < 0 && currentIndex > 0) {
+        goToSlide(currentIndex - 1);
+    } else if (dx < 0 && currentIndex === 0) {
+        goToSlide(totalSlides - 1);
+    } else if (dx > 0 && currentIndex === totalSlides - 1) {
+        goToSlide(0);
+    }
+
+    x1 = null;
+});
+
