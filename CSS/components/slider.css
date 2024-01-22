@@ -25,12 +25,25 @@
     margin: 40px 0 20px 0;
     min-width: 100%;
     height: 285px;
+    background-color: var(--bg-secondary);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+}
+
+.slide:first-child {
+    z-index: 5;
+}
+
+.slide:last-child {
+    margin: 0 auto;
+}
+
+.slide-opacity {
+    opacity: 1 !important;
 }
 
 .slide img {
@@ -103,14 +116,21 @@
         width: 980px;
         margin: 0 auto;
         height: 224px;
+        position: relative;
     }
 
     .slide {
+        position: absolute;
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
         height: 100%;
         margin: 0;
+    }
+
+    .slide img {
+        display: inline-block;
+        max-height: auto;
     }
 
 }

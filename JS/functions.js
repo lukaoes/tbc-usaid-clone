@@ -77,3 +77,22 @@ const toggleAnswer = (qnum) => {
         arrow.classList.toggle('open-arrow');
     }
 }
+
+// slider
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+let currentIndex = 0;
+let autoSlideTimeout;
+let delayTimeout;
+let x1 = null;
+
+// create dots for slider
+const dotsContainer = document.querySelector('.slider-dots');
+const dots = Array.from({ length: totalSlides }, (_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dotsContainer.appendChild(dot);
+    dot.addEventListener('click', () => goToSlide(i));
+    return dot;
+});
+

@@ -11,7 +11,9 @@ const slidesData = [
         "./assets/images/partner-imgs/tbc-partner.png"
     ],
     [
-        "./assets/images/partner-imgs/ufc-partner.png"
+        "",
+        "./assets/images/partner-imgs/ufc-partner.png",
+        ""
     ]
 ];
 
