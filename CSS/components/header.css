@@ -198,9 +198,3 @@ header img {
         visibility: hidden;
     }
 }
-
-@media only screen and (min-width: 980px) {
-    .header-layout {
-        padding: 0;
-    }
-}
