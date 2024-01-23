@@ -21,17 +21,28 @@ const headerChange = () => {
     window.onscroll = () => {
         let scrollNow = window.pageYOffset;
 
-        if (scrollNow === 0) {
-            header.style.backgroundColor = "#1A1E1F";
-            header.style.opacity = "1";
-            header.style.top = "0";
-        } else if (lastScroll > scrollNow) {
-            header.style.top = "0";
-            header.style.backgroundColor = "#222222F2";
-            header.style.opacity = "0.99";
+        if (window.innerWidth <= 768) {
+            if (scrollNow === 0) {
+                header.style.backgroundColor = "#1A1E1F";
+                header.style.opacity = "1";
+                header.style.top = "0";
+            } else if (lastScroll > scrollNow) {
+                header.style.top = "0";
+                header.style.backgroundColor = "#222222F2";
+                header.style.opacity = "0.99";
+            } else {
+                header.style.top = "-69px";
+                header.style.opacity = "0.99";
+            }
         } else {
-            header.style.top = "-69px";
-            header.style.opacity = "0.99";
+            if (scrollNow === 0) {
+                header.style.backgroundColor = "#1A1E1F";
+                header.style.opacity = "1";
+            } else {
+                header.style.top = "0";
+                header.style.backgroundColor = "#222222F2";
+                header.style.opacity = "0.99";
+            }
         }
 
         lastScroll = scrollNow;
@@ -39,23 +50,10 @@ const headerChange = () => {
 };
 
 const watchSizeChange = () => {
-    if (window.innerWidth < 768) {
-        headerChange();
-    } else {
-        let header = document.getElementById("main-header");
-        header.style.top = "0";
-        header.style.opacity = "1";
-        window.onscroll = null;
-    }
+    headerChange();
 };
 
 watchSizeChange();
-
-window.onresize = () => {
-    watchSizeChange();
-};
-
-
 
 // FAQ questions accordion 
 const toggleAnswer = (qnum) => {
