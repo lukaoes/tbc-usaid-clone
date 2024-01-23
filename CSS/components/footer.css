@@ -19,7 +19,7 @@ footer {
 
 footer button {
     background-color: var(--brand-color);
-    color: var(--white);
+    color: #FFFFFF;
     font-family: var(--font-c9e);
     width: 109px;
     height: 35px;
