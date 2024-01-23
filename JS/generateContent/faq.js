@@ -56,8 +56,8 @@ const generateFaq = (data) => {
     let faqQs = "";
     data.forEach((element) => {
         faqQs = faqQs + `
-        <div class="question-container" onclick="toggleAnswer(${element.id})">
-            <div class="question-block flex">
+        <div class="question-container">
+            <div class="question-block flex"  onclick="toggleAnswer(${element.id})">
                 <div class="question">
                     <h3>
                         ${element.question}
