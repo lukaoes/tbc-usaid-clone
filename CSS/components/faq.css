@@ -77,12 +77,12 @@
 }
 
 .answer ul {
-    margin-bottom: 30px;
+    margin: 10px 0 30px 0;
 }
 
 .answer li {
     margin-left: 24px;
-    padding: 4px 0;
+    padding: 2px 0;
 }
 
 .answer span {
