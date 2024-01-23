@@ -17,7 +17,7 @@ const slidesData = [
     ]
 ];
 
-function createSlide(images) {
+const createSlide = (images) => {
     const slideDiv = document.createElement("div");
     slideDiv.className = "slide";
 
@@ -27,22 +27,22 @@ function createSlide(images) {
         img.src = imageSrc;
 
         const imageName = imageSrc.split("/").pop().replace("-partner.png", "");
-        img.alt = imageName
+        img.alt = imageName;
 
         imageDiv.appendChild(img);
         slideDiv.appendChild(imageDiv);
     });
 
     return slideDiv;
-}
+};
 
-function generateSlides() {
+const generateSlides = () => {
     const slidesContainer = document.querySelector('.slides');
 
     slidesData.forEach((images, index) => {
         const slide = createSlide(images, index);
         slidesContainer.appendChild(slide);
     });
-}
+};
 
 generateSlides();
