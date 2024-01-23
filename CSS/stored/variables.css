@@ -19,10 +19,4 @@
     --font-119: wf_f52303b2efea42e1b4aeed119, Arial, Helvetica, sans-serif;
     --font-c9e: wf_dd28b3957391427eb54de1c9e, Arial, Helvetica, sans-serif;
     --font-431: wf_7737b5e7be24426aa35c9f431, Arial, Helvetica, sans-serif;
-
-    /* breakpoints */
-    --small-phone-breakpoint: 320px;
-    --mobile-breakpoint: 480px;
-    --tablet-breakpoint: 768px;
-    --desktop-breakpoint: 1024px;
 }
