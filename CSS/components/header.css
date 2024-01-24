@@ -1,15 +1,9 @@
 @import '../stored/variables.css';
 
-/* shared classes */
-.flex {
-    display: flex;
-}
-
 body {
     margin-top: 69px;
 }
 
-/* header */
 header {
     background-color: var(--header-footer);
     height: 69px;
@@ -127,35 +121,6 @@ header img {
 
 .desktop-navigation {
     display: none;
-    justify-content: end;
-    height: 100%;
-    width: 454px;
-    text-align: end;
-}
-
-.desktop-navigation ul li:first-child {
-    width: 113px;
-}
-
-.desktop-navigation ul li:nth-child(2) {
-    width: 96px;
-}
-
-.desktop-navigation ul li:nth-child(3) {
-    width: 137px;
-}
-
-.desktop-navigation ul li:last-child {
-    width: 108px;
-}
-
-.desktop-navigation ul li a {
-    padding: 0 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-.desktop-navigation ul li:hover a {
-    color: var(--brand-color);
 }
 
 #menu-opened-overlay {
@@ -185,6 +150,7 @@ header img {
         height: 40px;
     }
 
+
     .hamburger-menu,
     .mobile-navigation {
         display: none !important;
@@ -192,6 +158,23 @@ header img {
 
     .desktop-navigation {
         display: flex;
+        justify-content: end;
+        height: 100%;
+        width: 454px;
+        text-align: end;
+    }
+
+    .desktop-navigation ul {
+        gap: 30px;
+    }
+
+    .desktop-navigation ul li a {
+        padding: 0 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .desktop-navigation ul li:hover a {
+        color: var(--brand-color);
     }
 
     #menu-opened-overlay {
