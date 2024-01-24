@@ -9,8 +9,7 @@
     line-height: 1.6;
 }
 
-#aboutParagraph {
-    margin: 0 auto;
+.about-paragraph {
     margin: -1px 20px 32px 20px;
     padding-top: 32px;
 }
@@ -33,7 +32,7 @@
 }
 
 @media only screen and (min-width: 980px) {
-    #aboutParagraph {
+    .about-paragraph {
         width: 963px;
         font-size: 28px;
         margin: -1px auto 0 auto;
