@@ -38,10 +38,6 @@
     z-index: 5;
 }
 
-.slide:last-child {
-    margin: 0 auto;
-}
-
 .slide-opacity {
     opacity: 1 !important;
 }
@@ -79,7 +75,6 @@
     .slider-arrows {
         position: absolute;
         top: 50%;
-        display: flex;
         width: 100%;
         justify-content: space-between;
         margin: 0 auto;
@@ -112,7 +107,6 @@
     }
 
     .slides {
-        /* overflow: hidden; */
         width: 980px;
         margin: 0 auto;
         height: 224px;
