@@ -51,7 +51,7 @@ const courseDetailedData = [
     },
     {
         id: 'DevOps-course',
-        image: './assets/images/course-imgs/DevOps-course.jpg',
+        image: './assets/images/course-imgs/devops-course.jpg',
         title: 'DevOps',
         registerStatus: false,
         details: 'https://www.tbcacademy.ge/usaid/DevOps',
